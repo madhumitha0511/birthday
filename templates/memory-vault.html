@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Vault | Happy Birthday, Akshath!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #22698a;
+      font-family: 'Montserrat', Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      width: 100%;
+      background: #14405d;
+      padding: 18px 0 14px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      padding: 6px 20px;
+      border-radius: 20px;
+      transition: background 0.2s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.10);
+    }
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding-top: 110px;
+      position: relative;
+    }
+    .memory-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.2em;
+  font-weight:700; /* Script fonts may not support bold */
+  color: #fff;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding-top: 24px;
+}
+
+    .memory-caption {
+     font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.4em;
+      color: #fff;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+   /* Masonry container */
+.photo-collage {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 40px 110px; /* Padding to prevent image-emoji overlap */
+}
+
+/* Individual image style */
+.photo-collage img {
+  width: 100%;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  break-inside: avoid;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects */
+.photo-collage img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+  .photo-collage {
+    column-count: 2;
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .photo-collage {
+    column-count: 1;
+    padding: 16px 20px;
+  }
+}
+
+ .compact-player {
+    background: #ffffff;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 400px;
+    margin-left: auto;
+  margin-right: auto;
+    gap: 8px;
+    
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .compact-player button {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .compact-player input[type="range"] {
+    height: 5px;
+    width: 100px;
+    cursor: pointer;
+  }
+
+
+  .volume-container:hover .volume-popup {
+    display: block;
+  }
+
+    /* Emoji stacks for decoration */
+    .emoji-stack {
+      position: fixed;
+      z-index: 10;
+      pointer-events: none;
+      font-size: 2.2em;
+      opacity: 0.88;
+      line-height: 0.8;
+    }
+    .emoji-stack.l1 { left: 1em; top: 10%; }
+    .emoji-stack.l2 { left: 1em; top: 20%; }
+    .emoji-stack.l3 { left: 1em; top: 30%; }
+    .emoji-stack.l4 { left: 1em; top: 40%; }
+    .emoji-stack.l5 { left: 1em; top: 50%; }
+    .emoji-stack.l6 { left: 1em; top: 60%; }
+    .emoji-stack.l7 { left: 1em; top: 70%; }
+    .emoji-stack.l8 { left: 1em; top: 80%; }
+    .emoji-stack.l9 { left: 1em; top: 90%; }
+    .emoji-stack.r1 { right: 1em; top: 10%; }
+    .emoji-stack.r2 { right: 1em; top: 20%; }
+    .emoji-stack.r3 { right: 1em; top: 30%; }
+    .emoji-stack.r4 { right: 1em; top: 40%; }
+    .emoji-stack.r5 { right: 1em; top: 50%; }
+    .emoji-stack.r6 { right: 1em; top: 60%; }
+    .emoji-stack.r7 { right: 1em; top: 70%; }
+    .emoji-stack.r8 { right: 1em; top: 80%; }
+    .emoji-stack.r9 { right: 1em; top: 90%; }
+    @media (max-width: 600px) {
+      .memory-title { font-size: 2em; }
+      .memory-caption { font-size: 1.1em; }
+      .photo-collage { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+      .emoji-stack { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/memorywall">Memory Vault</a>
+      <a href="/wishwall">Wish Wall</a>
+    </nav>
+  </header>
+  <!-- Left side -->
+    <div class="emoji-stack l1">⛵</div>
+    <div class="emoji-stack l2">🐬</div>
+    <div class="emoji-stack l3">🦀</div>
+    <div class="emoji-stack l4">🌊</div>
+    <div class="emoji-stack l5">⭐</div>
+    <div class="emoji-stack l6">🦑</div>
+    <div class="emoji-stack l7">🪸</div>
+    <div class="emoji-stack l8">✨</div>
+    <div class="emoji-stack l9">⚓</div>
+    <!-- Right side -->
+     <div class="emoji-stack r1">⚓</div>
+     <div class="emoji-stack r2">🐚</div>
+     <div class="emoji-stack r3">🦑</div>
+     <div class="emoji-stack r4">🪸</div>
+     <div class="emoji-stack r5">✨</div>
+     <div class="emoji-stack r6">🦀</div>
+     <div class="emoji-stack r7">🌊</div>
+     <div class="emoji-stack r8">⭐</div>
+     <div class="emoji-stack r9">⛵</div>
+  <div class="hero-container">
+    <h1 class="memory-title">Memory Vault</h1>
+    <p class="memory-caption">Every picture tells a story💌 </p>
+     <div class="compact-player">
+  <button id="playBtn">▶️</button>
+  <input type="range" id="seekBar" value="0" min="0" max="100">
+
+  <audio id="miniAudio">
+    <source src="{{ url_for('static', filename='images/'+'kadhaippoma.mp3') }}" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+  const audio = document.getElementById("miniAudio");
+  const playBtn = document.getElementById("playBtn");
+  const seekBar = document.getElementById("seekBar");
+  const volControl = document.getElementById("volControl");
+
+  playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = "⏸️";
+    } else {
+      audio.pause();
+      playBtn.textContent = "▶️";
+    }
+  });
+
+  audio.addEventListener("timeupdate", () => {
+    seekBar.value = (audio.currentTime / audio.duration) * 100;
+  });
+
+  seekBar.addEventListener("input", () => {
+    audio.currentTime = (seekBar.value / 100) * audio.duration;
+  });
+
+  volControl.addEventListener("input", () => {
+    audio.volume = volControl.value;
+  });
+</script>
+ <div class="photo-collage">
+  {% for photo in photos %}
+    <img src="{{ url_for('static', filename='images/' + photo) }}" class="photo" alt="Memory {{ loop.index }}">
+  {% endfor %}
+</div>
+
+</div>
+  </div>
+</body>
+</html>

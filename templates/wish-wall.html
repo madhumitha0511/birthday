@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wish Wall | Happy Birthday !</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #22698a;
+      font-family: 'Montserrat', Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      width: 100%;
+      background: #14405d;
+      padding: 18px 0 14px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      padding: 6px 20px;
+      border-radius: 20px;
+      transition: background 0.2s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.10);
+    }
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding-top: 110px;
+      position: relative;
+    }
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Montserrat:wght@400;500;600&display=swap');
+
+.wish-wall-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.2em;
+  font-weight:700; /* Script fonts may not support bold */
+  color: #fff;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding-top: 24px;
+}
+
+ .wish-wall-caption {
+     font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.4em;
+      color: #fff;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+
+    .video-wishes {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .video-wish {
+      background: #1b4663;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    .video-wish h3 {
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 0;
+    }
+    .video-placeholder {
+      width: 100%;
+      aspect-ratio: 9 / 16; /* Portrait by default */
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      background: #222;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .video-placeholder.horizontal {
+      aspect-ratio: 16 / 9; /* Landscape for Thata Patti */
+    }
+    .video-placeholder video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      z-index: 1;
+      pointer-events: none;
+      background: #222;
+    }
+    .video-placeholder.playing video {
+      pointer-events: auto;
+    }
+    /* Emoji stacks for decoration */
+    .emoji-stack {
+      position: fixed;
+      z-index: 10;
+      pointer-events: none;
+      font-size: 2.2em;
+      opacity: 0.88;
+      line-height: 0.8;
+    }
+    .emoji-stack.l1 { left: 1em; top: 10%; }
+    .emoji-stack.l2 { left: 1em; top: 20%; }
+    .emoji-stack.l3 { left: 1em; top: 30%; }
+    .emoji-stack.l4 { left: 1em; top: 40%; }
+    .emoji-stack.l5 { left: 1em; top: 50%; }
+    .emoji-stack.l6 { left: 1em; top: 60%; }
+    .emoji-stack.l7 { left: 1em; top: 70%; }
+    .emoji-stack.l8 { left: 1em; top: 80%; }
+    .emoji-stack.l9 { left: 1em; top: 90%; }
+    .emoji-stack.r1 { right: 1em; top: 10%; }
+    .emoji-stack.r2 { right: 1em; top: 20%; }
+    .emoji-stack.r3 { right: 1em; top: 30%; }
+    .emoji-stack.r4 { right: 1em; top: 40%; }
+    .emoji-stack.r5 { right: 1em; top: 50%; }
+    .emoji-stack.r6 { right: 1em; top: 60%; }
+    .emoji-stack.r7 { right: 1em; top: 70%; }
+    .emoji-stack.r8 { right: 1em; top: 80%; }
+    .emoji-stack.r9 { right: 1em; top: 90%; }
+    @media (max-width: 600px) {
+      .wish-wall-title { font-size: 2em; }
+      .wish-wall-caption { font-size: 1.1em; }
+      .video-wishes { grid-template-columns: 1fr; }
+      .emoji-stack { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/memorywall">Memory Vault</a>
+      <a href="/wishwall">Wish Wall</a>
+    </nav>
+  </header>
+  <!-- Left side -->
+  <div class="emoji-stack l1">⛵</div>
+  <div class="emoji-stack l2">🐬</div>
+  <div class="emoji-stack l3">🦀</div>
+  <div class="emoji-stack l4">🌊</div>
+  <div class="emoji-stack l5">⭐</div>
+  <div class="emoji-stack l6">🦑</div>
+  <div class="emoji-stack l7">🪸</div>
+  <div class="emoji-stack l8">✨</div>
+  <div class="emoji-stack l9">⚓</div>
+  <!-- Right side -->
+  <div class="emoji-stack r1">⚓</div>
+  <div class="emoji-stack r2">🐚</div>
+  <div class="emoji-stack r3">🦑</div>
+  <div class="emoji-stack r4">🪸</div>
+  <div class="emoji-stack r5">✨</div>
+  <div class="emoji-stack r6">🦀</div>
+  <div class="emoji-stack r7">🌊</div>
+  <div class="emoji-stack r8">⭐</div>
+  <div class="emoji-stack r9">⛵</div>
+
+  <div class="hero-container">
+    <h1 class="wish-wall-title"> Wish wall </h1>
+    <p class="wish-wall-caption">You missed us? we are here to celebrate your day .Dive into the cute little wishes from your loved ones💌</p>
+    <div class="video-wishes">
+      {% for wish in video_wishes %}
+      <div class="video-wish">
+        <h3>{{ wish.name }}</h3>
+        <div class="video-placeholder" onclick="playVideo(this)">
+          <video preload="metadata" controls>
+            <source src="{{ url_for('static', filename='images/' + wish.video) }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    function playVideo(el) {
+      if (el.classList.contains('playing')) return;
+      // Pause all other videos
+      document.querySelectorAll('.video-placeholder').forEach(ph => {
+        if (ph !== el) {
+          ph.classList.remove('playing');
+          const v = ph.querySelector('video');
+          v.pause();
+          v.currentTime = 0;
+        }
+      });
+      // Play this video
+      el.classList.add('playing');
+      const video = el.querySelector('video');
+      video.play();
+      video.controls = true;
+      video.style.pointerEvents = 'auto';
+      // When video ends, remove playing class
+      video.onended = function() {
+        el.classList.remove('playing');
+        video.controls = false;
+        video.style.pointerEvents = 'none';
+      };
+    }
+    // Prevent video controls from starting playback before click
+    document.querySelectorAll('.video-placeholder video').forEach(video => {
+      video.addEventListener('play', function(e) {
+        const parent = this.closest('.video-placeholder');
+        if (!parent.classList.contains('playing')) {
+          e.preventDefault();
+          parent.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
